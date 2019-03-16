@@ -1,0 +1,19 @@
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header > ul a {
+    padding-left: 30px;
+    font-family: "OpenSans Light";
+    font-size: 18px;
+    line-height: 2px;
+    letter-spacing: .2px;
+    color: #fff;
+}
+
+.header-main {
+    position: fixed;
+    width: 100%;
+    z-index: 1;}
