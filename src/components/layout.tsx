@@ -1,7 +1,7 @@
 import * as React from "react"
 import { StaticQuery, graphql } from "gatsby"
 import "../styles/reset.css"
-
+import "../styles/style.css"
 import Header from "./header"
 import Footer from "./Footer"
 

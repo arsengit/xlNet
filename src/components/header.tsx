@@ -9,13 +9,14 @@ interface IProps {
 const Header: React.FunctionComponent<IProps> = ({ siteTitle = "" }) => (
  
   <div className="header-main"> <header className="container">
-  
-  <a href="#"><img src={logo} alt="logo"/></a>
+   <Link to="/"><img src={logo} alt="logo"/></Link>
+ 
   <ul>
-    <Link to="/">Development</Link>
+    <Link to="/development">Development</Link>
     <Link to="/">Pricing</Link>
     <Link to="/">Career</Link>
     <Link to="/">Contact</Link>
+    <button>Pick a Time</button>
   </ul>
 </header></div>
 )

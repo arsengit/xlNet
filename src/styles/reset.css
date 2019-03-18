@@ -25,7 +25,8 @@ time, mark, audio, video {
 	border: 0;
 	font-size: 100%;
 	font: inherit;
-	vertical-align: baseline;
+    vertical-align: baseline;
+    font-family: "OpenSans Regular"; 
 }
 
 /* make sure to set some focus styles for accessibility */
@@ -40,7 +41,7 @@ footer, header, hgroup, menu, nav, section {
 }
 
 body {
-	line-height: 1;
+    line-height: 1;
 }
 
 ol, ul {
@@ -134,7 +135,7 @@ html {
  */
 
 a:focus {
-    outline: thin dotted;
+    outline: 0;
 }
 
 /**
@@ -378,4 +379,9 @@ textarea {
 a {
     text-decoration: none;
     outline: none;
+}
+
+.flex-between {
+ display: flex;
+ justify-content: space-between;
 }

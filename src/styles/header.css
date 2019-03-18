@@ -5,15 +5,74 @@ header {
 }
 
 header > ul a {
-    padding-left: 30px;
-    font-family: "OpenSans Light";
-    font-size: 18px;
-    line-height: 2px;
-    letter-spacing: .2px;
-    color: #fff;
+  padding-left: 30px;
+  font-family: "OpenSans Light";
+  font-size: 18px;
+  line-height: 2px;
+  letter-spacing: 0.2px;
+  color: #fff;
 }
 
 .header-main {
-    position: fixed;
-    width: 100%;
-    z-index: 1;}
+  padding: 15px 0 20px;
+  position: fixed;
+  width: 100%;
+  z-index: 2;
+  background: #01abe5 linear-gradient(to right, #01abe5 0%, #311e71 100%);
+}
+
+.header-content-container {
+  position: relative;
+  height: 100vh;
+}
+
+.header-content-container .gatsby-image-wrapper {
+  height: 100%;
+}
+
+.header-content {
+  position: absolute;
+  z-index: 1;
+  display: -webkit-flex;
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  left: 18%;
+}
+
+.header-content h1 {
+  margin-top: 130px;
+  letter-spacing: 2px;
+  max-width: 590px;
+  font-size: 4vw;
+}
+
+.header-content p {
+  color: #fff;
+  margin-top: 65px;
+  max-width: 490px;
+}
+
+.header-content button {
+  margin-top: 35px;
+  background: #4facfe;
+  color: #fff;
+  font-family: "OpenSans Regular";
+  max-width: 200px;
+  padding: 15px 0;
+  border: 0;
+  border-radius: 30px;
+  text-transform: uppercase;
+  box-shadow: 0px 25px 53px -3px #4facfe9e;
+}
+
+.header-main button,
+.footer-icons button {
+  background: #4facfe;
+  color: #fff;
+  font-family: "OpenSans Regular";
+  margin-left: 30px;
+  border: 0;
+  border-radius: 30px;
+  padding: 10px 50px;
+}

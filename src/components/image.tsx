@@ -6,16 +6,17 @@ const Image = (props: any) => (
   <StaticQuery
     query={graphql`
       query {
-        gatsby: file(relativePath: { eq: "gatsby-astronaut.png" }) {
+    
+        home_bg: file(relativePath: { eq: "home_bg.png" }) {
           childImageSharp {
-            fluid(maxWidth: 300) {
+            fluid(maxWidth: 1920) {
               ...GatsbyImageSharpFluid
             }
           }
         }
-        home_bg: file(relativePath: { eq: "home_bg.png" }) {
+        light: file(relativePath: { eq: "light.png" }) {
           childImageSharp {
-            fluid(maxWidth: 1920) {
+            fluid(maxWidth: 650) {
               ...GatsbyImageSharpFluid
             }
           }

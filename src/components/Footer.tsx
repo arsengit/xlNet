@@ -1,28 +1,44 @@
-import * as React from 'react';
+import * as React from "react"
 import { Link } from "gatsby"
-export interface FooterProps {
-    
-}
- 
+import "../styles/footer.css"
+export interface FooterProps {}
+
 const Footer: React.FunctionComponent<FooterProps> = () => {
-    return ( 
-        <footer>
-            <ul>
-                <Link to="/">Pricing</Link>
-                <Link to="/">Career</Link>
-                <Link to="/">Contact</Link>
-            </ul>
-            <div><ul>
-                <a href="#"><i></i></a>
-                <a href="#"><i></i></a>
-                <a href="#"><i></i></a>
-            </ul>
-            <a href="#">get started</a>
+  return (
+    <footer>
+      <div className="container">
+        <ul className="footer-nav">
+          <Link to="/">Pricing</Link>
+          <Link to="/">Career</Link>
+          <Link to="/">Contact</Link>
+        </ul>
+        <div className="flex-between footer-icons">
+          <ul>
+            <a href="#">
+              <i className="icon-linkedin2" />
+            </a>
+            <a href="#">
+              <i className="icon-twitter" />
+            </a>
+            <a href="#">
+              <i className="icon-facebook1" />
+            </a>
+          </ul>
+          <button>get started</button>
+        </div>
+        <div className="flex-between footer-bottom">
+            <div>
+            <span>2019 XLENT Technologies. All rights reserved.</span>
             </div>
-            <div><span>2019 XLENT Technologies. All rights reserved.</span><span>Tel: (650) 337-7781
-Email: info@xlent.tech</span></div>
-        </footer>
-     );
+         <div>
+         <span>Tel: (650) 337-7781 </span>
+          <span className="footer-email"> Email: info@xlent.tech</span>
+         </div>
+         
+        </div>
+      </div>
+    </footer>
+  )
 }
- 
-export default Footer;
+
+export default Footer
