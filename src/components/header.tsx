@@ -12,10 +12,10 @@ const Header: React.FunctionComponent<IProps> = ({ siteTitle = "" }) => (
    <Link to="/"><img src={logo} alt="logo"/></Link>
  
   <ul>
-    <Link to="/development">Development</Link>
-    <Link to="/">Pricing</Link>
-    <Link to="/">Career</Link>
-    <Link to="/">Contact</Link>
+    <Link to="/">Development</Link>
+    <Link to="/pricing">Pricing</Link>
+    <Link to="/career">Career</Link>
+    <Link to="/contact">Contact</Link>
     <button>Pick a Time</button>
   </ul>
 </header></div>

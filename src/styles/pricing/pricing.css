@@ -1,0 +1,45 @@
+.pricing-main {
+    padding-top: 140px;
+    margin-bottom: 10px;
+}
+
+.pricing-items {
+    margin-top: 120px;
+    display: flex;
+    
+}
+
+.pricing-img {
+    padding: 50px 0;
+   width: 33%;
+   transition: all .3s ease-out;
+   border-bottom: 1px solid #c7ccff;
+   display: flex;
+   flex-direction: column;
+   justify-content: flex-end;
+}
+
+.pricing-img:hover {
+    border-bottom: 1px solid #4ca9ff;
+    box-shadow: 1px 43px 144px -27px rgba(0,0,0,0.57);
+}
+
+.pricing-img strong {
+    margin-top: 20px;
+    display: block;
+    text-align: center;
+}
+
+.pricing-img .gatsby-image-wrapper {
+    width: 25%;
+    margin: 0 auto;
+}
+
+
+.pricing-bottom {
+    margin-top: 150px
+}
+
+.pricing-bottomImg {
+    width: 35%;
+}

@@ -53,7 +53,7 @@ header > ul a {
   max-width: 490px;
 }
 
-.header-content button {
+.header-content button{
   margin-top: 35px;
   background: #4facfe;
   color: #fff;
@@ -67,7 +67,7 @@ header > ul a {
 }
 
 .header-main button,
-.footer-icons button {
+.footer-icons button, .pricing-bottom button  {
   background: #4facfe;
   color: #fff;
   font-family: "OpenSans Regular";

@@ -11,8 +11,8 @@ class Circle extends React.Component<CircleProps, CircleState> {
   state = {}
   render() {
     return (
-      <div className="flex-between circles">
-        <div>
+      <div className="circles ">
+        <div className="pulse">
           {" "}
           <Spring
             from={{ value: 0 }}
@@ -33,6 +33,7 @@ class Circle extends React.Component<CircleProps, CircleState> {
               />
             )}
           </Spring>
+          <strong>Project</strong>
         </div>
         <div>
           {" "}
@@ -55,6 +56,7 @@ class Circle extends React.Component<CircleProps, CircleState> {
               />
             )}
           </Spring>
+          <strong>Clients</strong>
         </div>
         <div>
           {" "}
@@ -77,6 +79,7 @@ class Circle extends React.Component<CircleProps, CircleState> {
               />
             )}
           </Spring>
+          <strong>Team</strong>
         </div>
         <div>
           {" "}
@@ -99,6 +102,7 @@ class Circle extends React.Component<CircleProps, CircleState> {
               />
             )}
           </Spring>
+          <strong>Product</strong>
         </div>
       </div>
     )

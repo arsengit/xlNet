@@ -5,10 +5,11 @@ import OurClients from "../components/home/OurClients"
 import Layout from "../components/layout"
 import Image from "../components/image"
 import SEO from "../components/seo"
+import Projects from "../components/home/projects";
 
 const IndexPage = () => (
   <Layout>
-    <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
+    <SEO title="Home" keywords={[`xlNet`, `application`, `mobile`]} />
      
       <div className="header-content-container">
         <div className="header-content">
@@ -22,6 +23,7 @@ const IndexPage = () => (
         <div>
       <WhoWeAre/>
       <OurClients/>
+      <Projects/>
         </div>
   </Layout>
 )

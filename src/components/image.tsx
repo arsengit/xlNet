@@ -21,7 +21,44 @@ const Image = (props: any) => (
             }
           }
         }
+      
+
+      workers: file(relativePath: { eq: "workers.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 750) {
+            ...GatsbyImageSharpFluid
+          }
+        }
       }
+      webDev: file(relativePath: { eq: "WebDevelopment.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 100) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      productDesign: file(relativePath: { eq: "ProductDesign.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 100) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      mobileDevelopment: file(relativePath: { eq: "MobileDevelopment.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 100) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      mobileil: file(relativePath: { eq: "mobileil.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 600) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+    }
     `}
     render={data => <Img fluid={data[props.image].childImageSharp.fluid} />}
   />
