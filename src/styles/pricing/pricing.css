@@ -1,4 +1,4 @@
-.pricing-main {
+.pricing-main, .get-main {
     padding-top: 140px;
     margin-bottom: 10px;
 }
@@ -21,7 +21,7 @@
 
 .pricing-img:hover {
     border-bottom: 1px solid #4ca9ff;
-    box-shadow: 1px 43px 144px -27px rgba(0,0,0,0.57);
+    box-shadow: 1px 10px 130px -27px rgba(0,0,0,0.57);
 }
 
 .pricing-img strong {
@@ -37,9 +37,26 @@
 
 
 .pricing-bottom {
-    margin-top: 150px
+    margin-top: 150px;
+    display: flex;
+    justify-content: space-around;
 }
 
 .pricing-bottomImg {
-    width: 35%;
+    width: 25%;
+}
+
+
+.pricing-text {
+    max-width: 600px;
+}
+
+.pricing-bottom span {
+   
+    padding-left: 15px ; 
+    
+}
+
+.pricing-bottom button {
+    margin-top: 90px;
 }

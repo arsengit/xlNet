@@ -53,7 +53,42 @@ const Image = (props: any) => (
       }
       mobileil: file(relativePath: { eq: "mobileil.png" }) {
         childImageSharp {
-          fluid(maxWidth: 600) {
+          fluid(maxWidth: 310) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      pricing_bg: file(relativePath: { eq: "pricing_bg.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 1920) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      discussion: file(relativePath: { eq: "discussion.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 350) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      structure: file(relativePath: { eq: "structure.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 300) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      design: file(relativePath: { eq: "design.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 275) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      implementation: file(relativePath: { eq: "implementation.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 225) {
             ...GatsbyImageSharpFluid
           }
         }

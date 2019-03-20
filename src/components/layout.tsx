@@ -5,6 +5,8 @@ import "../styles/style.css"
 import Header from "./header"
 import Footer from "./Footer"
 
+
+
 const Layout: React.FunctionComponent = ({ children }) => (
   <StaticQuery
     query={graphql`
@@ -21,8 +23,7 @@ const Layout: React.FunctionComponent = ({ children }) => (
         <Header siteTitle={data.site.siteMetadata.title} />
           <main>{children}</main>
           <Footer/>
-           
-       
+                  
       </>
     )}
   />

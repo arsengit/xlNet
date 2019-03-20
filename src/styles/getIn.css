@@ -1,0 +1,88 @@
+.get-content {
+  box-shadow: 3px 0px 80px 0px rgba(0, 0, 0, 0.08);
+  margin-bottom: 350px;
+}
+
+.get-form {
+  width: 70%;
+}
+
+.get-form h4,
+.get-in-contact h4 {
+  font-size: 26px;
+  font-family: "OpenSans SemiBold";
+  color: rgb(0, 0, 0);
+  line-height: 1.385;
+  margin-bottom: 45px;
+}
+.get-form form {
+  padding: 45px;
+}
+
+.get-form input {
+  border: transparent;
+  width: 45%;
+  border-bottom: 1px solid #b7b7b7;
+  color: #b7b7b7;
+  padding: 10px 0;
+  margin-bottom: 60px;
+}
+
+.get-in-contact {
+  width: 30%;
+  background: #495aff;
+}
+
+.get-form span {
+  display: block;
+  padding: 10px 0 15px;
+  color: #b7b7b7;
+}
+
+.get-form textarea {
+  resize: none;
+  width: 100%;
+  margin-bottom: 70px;
+}
+
+.privacy strong,
+.privacy a {
+  display: block;
+  color: #b7b7b7;
+  font-size: 12px;
+}
+
+.privacy button {
+  border: 0;
+  background: #495aff;
+  padding: 15px 40px;
+  color: #fff;
+  border-radius: 40px;
+}
+
+button {
+  font-family: "OpenSans Regular";
+}
+
+.get-in-contact {
+  padding: 40px;
+}
+
+.get-in-contact h4 {
+  color: #fff;
+}
+
+.get-in-contact span {
+    margin-bottom: 15px;
+    color: #fff;
+    display: block;
+    font-size: 12px;
+    font-family: "OpenSans SemiBold";
+}
+
+.get-in-contact strong {
+    display: block;
+    font-size: 16px;
+    color: #fff;
+    margin-bottom: 40px;
+}

@@ -1,5 +1,4 @@
 import * as React from "react"
-import "react-circular-progressbar/dist/styles.css"
 import CircularProgressbar from "react-circular-progressbar"
 import { Spring } from "react-spring/renderprops"
 
@@ -13,7 +12,7 @@ class Circle extends React.Component<CircleProps, CircleState> {
     return (
       <div className="circles ">
         <div className="pulse">
-          {" "}
+        
           <Spring
             from={{ value: 0 }}
             to={{ value: 100 }}
@@ -36,7 +35,7 @@ class Circle extends React.Component<CircleProps, CircleState> {
           <strong>Project</strong>
         </div>
         <div>
-          {" "}
+          
           <Spring
             from={{ value: 0 }}
             to={{ value: 100 }}
@@ -59,7 +58,6 @@ class Circle extends React.Component<CircleProps, CircleState> {
           <strong>Clients</strong>
         </div>
         <div>
-          {" "}
           <Spring
             from={{ value: 0 }}
             to={{ value: 100 }}
@@ -82,7 +80,6 @@ class Circle extends React.Component<CircleProps, CircleState> {
           <strong>Team</strong>
         </div>
         <div>
-          {" "}
           <Spring
             from={{ value: 0 }}
             to={{ value: 100 }}
@@ -91,7 +88,7 @@ class Circle extends React.Component<CircleProps, CircleState> {
             {props => (
               <CircularProgressbar
                 initialAnimation={true}
-                strokeWidth={1}
+                strokeWidth={3}
                 percentage={props.value}
                 text={`${props.value.toFixed()}`}
                 styles={{

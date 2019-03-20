@@ -32,18 +32,18 @@ class PricingModels extends React.Component<
             <strong>Mobile Development</strong>
           </div>
         </div>
-        <div className="flex-between pricing-bottom">
-        <div className="pricing-bottomImg">
-            <Img image="mobileil"/>
-        </div>
-        <div>
+        <div className="pricing-bottom">
+          <div className="pricing-bottomImg">
+            <Img image="mobileil" />
+          </div>
+          <div className="pricing-text">
             <span>
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-          industry. Lorem Ipsum is simply dummy text of the printing and typesetting
-          industry.
+              Lorem Ipsum is simply dummy text of the printing and typesetting
+              industry. Lorem Ipsum is simply dummy text of the printing and
+              typesetting industry.
             </span>
             <button>Get Started</button>
-        </div>
+          </div>
         </div>
       </section>
     )
