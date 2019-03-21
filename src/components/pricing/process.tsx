@@ -11,7 +11,7 @@ const Process: React.SFC<ProcessProps> = () => {
         <section className="process-main">
         <div className="container">
         <h2>Our Process</h2>
-            <h3>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</h3>
+            <h3 className="section-info">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</h3>
         </div>
           
             <div className="process-items">
@@ -33,14 +33,14 @@ const Process: React.SFC<ProcessProps> = () => {
                           <Img image="structure"/>
                       </div>
                     <div className="process-text">
-                    <strong>Discussion with Client</strong >
+                    <strong>Structure of product</strong >
                         <span>Lorem Ipsum is simply dummy text of the printing and typesetting industryLorem Ipsum is simply dummy text of the printing and typesetting industryLorem Ipsum is simply dummy text of the printing and typesetting industry</span>
                     </div>
                     </div>
 
                     <div className="process-item process-item3">
                     <div className="process-text">
-                    <strong>Discussion with Client</strong >
+                    <strong>Design</strong >
                         <span>Lorem Ipsum is simply dummy text of the printing and typesetting industryLorem Ipsum is simply dummy text of the printing and typesetting industryLorem Ipsum is simply dummy text of the printing and typesetting industry</span>
                     </div>
                       <div className="process-img design-img">
@@ -53,7 +53,7 @@ const Process: React.SFC<ProcessProps> = () => {
                           <Img image="implementation"/>
                       </div>
                     <div className="process-text">
-                    <strong>Discussion with Client</strong >
+                    <strong>Implementation</strong >
                         <span>Lorem Ipsum is simply dummy text of the printing and typesetting industryLorem Ipsum is simply dummy text of the printing and typesetting industryLorem Ipsum is simply dummy text of the printing and typesetting industry</span>
                     </div>
                     </div>

@@ -1,6 +1,7 @@
 import * as React from "react"
 import "../../styles/pricing/pricing.css"
 import Img from "../image"
+import GetStarted from "../getStarted";
 export interface PricingModelsProps {}
 
 export interface PricingModelsState {}
@@ -14,7 +15,7 @@ class PricingModels extends React.Component<
     return (
       <section className="pricing-main container">
         <h2>Pricing Models</h2>
-        <h3>
+        <h3 className="section-info">
           Lorem Ipsum is simply dummy text of the printing and typesetting
           industry.
         </h3>
@@ -42,7 +43,7 @@ class PricingModels extends React.Component<
               industry. Lorem Ipsum is simply dummy text of the printing and
               typesetting industry.
             </span>
-            <button>Get Started</button>
+           <GetStarted/>
           </div>
         </div>
       </section>

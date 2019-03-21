@@ -1,6 +1,7 @@
 import * as React from "react"
 import { Link } from "gatsby"
 import "../styles/footer.css"
+import GetStarted from "./getStarted";
 export interface FooterProps {}
 
 const Footer: React.FunctionComponent<FooterProps> = () => {
@@ -8,9 +9,9 @@ const Footer: React.FunctionComponent<FooterProps> = () => {
     <footer>
       <div className="container">
         <ul className="footer-nav">
-          <Link to="/">Pricing</Link>
-          <Link to="/">Career</Link>
-          <Link to="/">Contact</Link>
+          <Link to="/pricing">Pricing</Link>
+          <Link to="/career">Career</Link>
+          <Link to="/contact">Contact</Link>
         </ul>
         <div className="flex-between footer-icons">
           <ul>
@@ -24,7 +25,7 @@ const Footer: React.FunctionComponent<FooterProps> = () => {
               <i className="icon-facebook1" />
             </a>
           </ul>
-          <button>get started</button>
+         <GetStarted/>
         </div>
         <div className="flex-between footer-bottom">
             <div>

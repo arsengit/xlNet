@@ -1,7 +1,6 @@
 import * as React from "react"
 import { Link } from "gatsby"
 import "../styles/header.css"
-import { throws } from "assert"
 const logo = require("../images/home/logo.png")
 
 export interface HeaderProps {}
@@ -21,15 +20,19 @@ class Header extends React.Component<HeaderProps, HeaderState> {
   }
 
   handleScroll = () => {
- 
-    const height = window.scrollY
-    if (height >= 800) {
+    const docHeight = document.body.scrollHeight
+    const scrollHeight = window.scrollY
+    const diff = document.body.scrollHeight - window.innerHeight
+    const main = diff + scrollHeight
+    console.log(main)
+    console.log(diff)
+    if (main + 150 >= docHeight) {
       this.setState({
         height: true,
       })
-    }else {
+    } else {
       this.setState({
-        height: false
+        height: false,
       })
     }
     this.changeActive()
@@ -42,9 +45,9 @@ class Header extends React.Component<HeaderProps, HeaderState> {
       this.setState({
         background: true,
       })
-    }else if (location == "/" && this.state.height === false){
+    } else if (location == "/" && this.state.height === false) {
       this.setState({
-        background: false
+        background: false,
       })
     }
   }
@@ -65,27 +68,30 @@ class Header extends React.Component<HeaderProps, HeaderState> {
   }
 
   componentWillMount() {
-    removeEventListener
+    removeEventListener("scroll", this.handleScroll)
   }
 
   render() {
     return (
+      
       <div
-        className={
-          this.state.background ? "header-main header-main-bg" : "header-main"
-        }
+        className=
+         "header-main "
+        
       >
-        {" "}
+     
+        <div className={this.state.background ? "header-main-bg": "header-main-bg head-opacity"}></div>
+      
         <header className="container">
           <Link to="/">
             <img src={logo} alt="logo" />
           </Link>
 
           <ul>
-            <Link to="/">Development</Link>
-            <Link to="/pricing">Pricing</Link>
-            <Link to="/career">Career</Link>
-            <Link to="/contact">Contact</Link>
+            <Link activeClassName="head-active" to="/">Development</Link>
+            <Link activeClassName="head-active" to="/pricing">Pricing</Link>
+            <Link activeClassName="head-active" to="/career">Career</Link>
+            <Link activeClassName="head-active" to="/contact">Contact</Link>
             <button>Pick a Time</button>
           </ul>
         </header>

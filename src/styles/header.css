@@ -23,13 +23,24 @@ header > ul a:hover {
   position: fixed;
   width: 100%;
   z-index: 2;
+  transition: all .3s ease-out; 
 }
 
 
+
 .header-main-bg {
-  
+  width: 100%;
+  height: 97px;
+  position: absolute;
+  top: 0;
+  z-index: -1;
+  opacity: 1;
   box-shadow: 0 0 7px 2px rgba(43, 43, 43, 0.47);
   background: #01abe5 linear-gradient(to right, #01abe5 0%, #311e71 100%);
+  transition: all .3s ease-out;
+}
+.head-opacity {
+  opacity: 0;
 }
 
 .header-content-container {
@@ -60,21 +71,13 @@ header > ul a:hover {
   max-width: 490px;
 }
 
+
 .header-content button {
   margin-top: 35px;
-  background: #4facfe;
-  color: #fff;
-  font-family: "OpenSans Regular";
-  max-width: 200px;
-  padding: 15px 0;
-  border: 0;
-  border-radius: 30px;
-  text-transform: uppercase;
-  box-shadow: 0px 25px 53px -3px #4facfe9e;
+ 
 }
 
 .header-main button,
-.footer-icons button,
 .pricing-bottom button {
   background: #4facfe;
   color: #fff;
@@ -83,4 +86,23 @@ header > ul a:hover {
   border: 0;
   border-radius: 30px;
   padding: 10px 50px;
+}
+
+.head-active {
+  color: #4facfe;
+}
+
+.get-started {
+  background: #4facfe;
+  color: #fff;
+  font-family: "OpenSans Regular";
+  max-width: 200px;
+  padding: 12px 45px;
+  border: 0;
+  border-radius: 30px;
+  box-shadow: 0px 25px 53px -3px #4facfe9e;
+}
+
+.header-content .get-started {
+  text-transform: uppercase;
 }

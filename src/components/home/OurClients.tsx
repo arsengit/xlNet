@@ -16,7 +16,7 @@ class Clients extends React.Component<ClientsProps, ClientsState> {
     return (
       <section className="container clients-main">
         <h2>Our Clients</h2>
-        <h3>
+        <h3 className="section-info">
           Lorem Ipsum is simply dummy text of the printing and typesetting
           industry.
         </h3>

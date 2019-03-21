@@ -71,3 +71,7 @@
 .process-item4 .process-text{
     margin-top: 70px;
 }
+
+.process-item2 strong, .process-item4 strong {
+    text-align: right;
+}

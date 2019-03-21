@@ -1,0 +1,65 @@
+.careerPage {
+    background: #f9f9f9;
+}
+
+.what-we-do {
+    margin-top: 70px;
+}
+
+.card-main {
+    margin-top: 100px;
+}
+
+.card-item {
+    padding: 0 15px;
+}
+
+
+.market-sales {
+    padding:10% 0 20%;
+}
+
+
+.card-item strong {
+    margin-bottom: 45px;
+    font-size: 18px;
+    font-family: "OpenSans SemiBold"
+}
+
+.card-item strong, .card-item span{
+    display: block;
+}
+
+.card-apply {
+    
+    border-top: 1px solid #f9f9f9;
+    padding: 0 45px;
+}
+
+.card-apply button {
+    margin-top: 25px;
+    padding: 10px 65px;
+    border-radius: 20px;
+    border: 0;
+    font-size: 16px;
+    transition: all .3s ease-out;
+    color: #5565ff;
+    background: #f9f9f9;
+}
+
+.card-apply button:hover {
+    background: #495aff;
+    color: #fff;
+}
+
+.card-location {
+    padding: 25px 0 45px;
+}
+
+.card-body {
+    background: #fff;
+    border-radius: 10px;
+    padding: 40px 0 25px;
+}
+
+
