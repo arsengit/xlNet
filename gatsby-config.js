@@ -1,9 +1,11 @@
 module.exports = {
   siteMetadata: {
-    title: `xlNet`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `Arsen Alkamyan`,
+    title: `xlent`,
+    description: `Software Development Company`,
+    author: `xlent.tech`,
   },
+  // Note: it must *not* have a trailing slash.
+  pathPrefix: `/blog`,
   plugins: [
     `gatsby-plugin-react-helmet`,
     {
@@ -19,17 +21,17 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
+        name: `xlent.tech`,
+        short_name: `xlent`,
         start_url: `/`,
         background_color: `#663399`,
         theme_color: `#663399`,
-        display: `minimal-ui`,
+        display: `standalone`,
         icon: `src/images/home/Logo.png`, // This path is relative to the root of the site.
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
-    // 'gatsby-plugin-offline',
+    'gatsby-plugin-offline',
   ],
 }
