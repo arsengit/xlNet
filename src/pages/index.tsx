@@ -5,7 +5,6 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import GetStarted from "../components/getStarted"
 import Projects from "../components/home/projects";
-import PickTime from "../components/dataPicker";
 
 const IndexPage = () => (
   <Layout>
@@ -22,7 +21,6 @@ const IndexPage = () => (
         </div>
         <div>
       <WhoWeAre/>
-      <PickTime/>
       <OurClients/>
       <Projects/>
         </div>

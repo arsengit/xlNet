@@ -7,7 +7,7 @@
 }
 
 .card-main {
-    margin-top: 100px;
+    margin-top: 130px;
 }
 
 .card-item {
@@ -16,9 +16,15 @@
 
 
 .market-sales {
-    padding:10% 0 20%;
+    padding:0 0 170px;
 }
 
+.market-sales h3 {
+    text-align: center;
+    font-size: 32px;
+    font-family: "OpenSans Regular";
+    margin-top: 190px;
+}
 
 .card-item strong {
     margin-bottom: 45px;
