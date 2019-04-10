@@ -55,10 +55,18 @@
 .privacy button {
   border: 0;
   background: #495aff;
-  padding: 15px 40px;
+  padding: 9px 39px;
   color: #fff;
   border-radius: 40px;
+  transition: all .3s ease-out;
 }
+
+
+.privacy button:hover {
+  transform: scale(1.1);
+  transition: all .3s ease-out
+}
+
 
 button {
   font-family: "OpenSans Regular";

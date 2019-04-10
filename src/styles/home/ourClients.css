@@ -82,3 +82,68 @@
   width: 59%;
 
 }
+
+.disabled {
+ pointer-events: none;
+}
+
+.slide-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding: 55px 20px;
+}
+
+.slider-main {
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+  max-width: 1230px;
+}
+
+
+.slide-section button {
+  background: transparent;
+  border: none;
+}
+
+.slider-images {
+  display: flex;
+  justify-content: space-between;
+}
+
+.iphoneImg {
+  background: url("../../images/slideiphone.png") no-repeat center center ;
+  background-size: contain;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transition: all .2s ease-out
+}
+
+.slider-images .gatsby-image-wrapper {
+  margin: 0 15px;
+}
+
+.slider-images .gatsby-image-wrapper {
+  width: 240px
+}
+
+.prevBtn {
+  margin-right: 25px;
+}
+.nextBtn {
+  margin-left: 25px;
+  transform: rotate(180deg)
+}
+
+.iphoneZ {
+  z-index: 1 !important;
+  
+  transition: all .2s ease-out;
+}
+

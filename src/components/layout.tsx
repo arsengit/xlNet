@@ -4,7 +4,6 @@ import "../styles/reset.css"
 import "../styles/style.css"
 import Header from "./header"
 import Footer from "./Footer"
-import CustomScroll from 'react-custom-scroll';
 
 
 const Layout: React.FunctionComponent = ({ children }) => (
@@ -20,11 +19,9 @@ const Layout: React.FunctionComponent = ({ children }) => (
     `}
     render={data => (
       <>
-      <CustomScroll>
           <Header siteTitle={data.site.siteMetadata.title} />
           <main>{children}</main>
           <Footer/>
-      </CustomScroll>
       </>
     )}
   />

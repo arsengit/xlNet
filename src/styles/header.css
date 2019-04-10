@@ -53,7 +53,7 @@ header > ul a:hover {
 
 .modal-desc {
   margin-top: 25px;
-margin-bottom: 40px;
+  margin-bottom: 40px;
 }
 
 .header-content {
@@ -76,6 +76,14 @@ margin-bottom: 40px;
 
 .header-content button {
   margin-top: 35px;
+  transition: all 0.3s ease-out;
+}
+
+.header-content button:hover {
+  color: #4facfe;
+  background: #fff;
+
+  transition: all 0.3s ease-out;
 }
 
 .header-main button,
@@ -121,8 +129,6 @@ margin-bottom: 40px;
   padding: 30px 0 20px;
   width: 380px;
 }
-
-
 
 .DateInput_input__focused,
 .DateInput {
@@ -171,11 +177,10 @@ margin-bottom: 40px;
   padding: 0 60px !important;
 }
 
-
 .CalendarMonth_caption {
- display: flex !important;
- justify-content: center !important;
- margin-right: 140px !important;
+  display: flex !important;
+  justify-content: center !important;
+  margin-right: 140px !important;
 }
 
 .modal h2 {
@@ -241,9 +246,8 @@ margin-bottom: 40px;
 
 .DayPickerNavigation_rightButton__horizontalDefault {
   right: -10px !important;
-  top:15px !important;
+  top: 15px !important;
 }
-
 
 .DayPickerNavigation_button__horizontalDefault {
   top: 15px !important;
@@ -257,15 +261,15 @@ margin-bottom: 40px;
 }
 
 .DayPickerNavigation_button__default {
-   border: 1px solid #e4e7e700 !important; 
-   background-color: rgba(255, 255, 255, 0) !important;
+  border: 1px solid #e4e7e700 !important;
+  background-color: rgba(255, 255, 255, 0) !important;
 }
 
 .DayPicker_weekHeader_li {
   color: white;
   width: 33px !important;
 }
-.DayPicker_transitionContainer{
+.DayPicker_transitionContainer {
   width: 380px !important;
   height: 320px !important;
 }
@@ -278,6 +282,7 @@ margin-bottom: 40px;
   border: 0 !important;
   color: #fff !important;
   background: #0066cb !important;
+  vertical-align: middle !important;
 }
 
 .CalendarDay__blocked_out_of_range {
@@ -289,8 +294,6 @@ margin-bottom: 40px;
   background: #fff !important;
   border: 1px double #0066cb !important;
   color: #6d7bff !important;
-  width: 35px !important;
-  height: 35px !important;
   border-radius: 50% !important;
   align-items: center;
   display: flex;

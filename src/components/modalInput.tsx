@@ -16,6 +16,9 @@ class ModalInput extends React.Component <ModalInputProps, ModalInputState> {
         selected: false
      }
 
+
+     
+
     handleSelect = (e: React.SyntheticEvent) => {
         e.preventDefault()
         this.setState({
@@ -33,7 +36,7 @@ class ModalInput extends React.Component <ModalInputProps, ModalInputState> {
           >
               {
                   props=> (
-                    <div style={props} className="current-input"><input  className="selected-input" readOnly onClick={this.handleSelect} value={time} type="text"/> <button>Confirm</button></div>  
+                    <div style={props} className="current-input"><input  className="selected-input" readOnly onClick={this.handleSelect}  value={time} type="text"/> <button>Confirm</button></div>  
                   )
               }
               
