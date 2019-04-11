@@ -1,6 +1,6 @@
 import * as React from "react"
 import Img from "../image"
-import {Link} from "gatsby"
+import { Link } from "gatsby"
 import "../../styles/home/whoWe.css"
 export interface WhoWeAreProps {}
 
@@ -10,7 +10,7 @@ const WhoWeAre: React.FunctionComponent<WhoWeAreProps> = () => {
       <h2>Who We Are</h2>
       <div className="flex-between whoWe-content">
         <div className="light">
-        <Img image="light"/>
+          <Img image="light" />
         </div>
         <div className="whoWe-text">
           <p>

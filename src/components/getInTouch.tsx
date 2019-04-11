@@ -7,6 +7,7 @@ export interface ContactState {}
 
 class Contact extends React.Component<ContactProps, ContactState> {
   state = {}
+
   render() {
     return (
       <section className="get-main">
@@ -25,7 +26,7 @@ class Contact extends React.Component<ContactProps, ContactState> {
                   <input type="text" placeholder="Company E-mail" />
                 </div>
                 <span>Message*</span>
-                <textarea rows="10" />
+                <textarea rows={10} />
                 <div className="flex-between privacy">
                   <div>
                     <strong>by clicking you agree to our</strong>
@@ -43,7 +44,12 @@ class Contact extends React.Component<ContactProps, ContactState> {
               <span>E-main</span>
               <strong>info@xlent.tech</strong>
               <span>Mailing address</span>
-              <strong>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has </strong>
+              <strong>
+                Lorem Ipsum is simply dummy text of the printing and typesetting
+                industry. Lorem Ipsum has been the industry's standard dummy
+                text ever since the 1500s, when an unknown printer took a galley
+                of type and scrambled it to make a type specimen book. It has{" "}
+              </strong>
             </div>
           </div>
         </div>

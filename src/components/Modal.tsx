@@ -1,5 +1,7 @@
 import * as React from "react"
 import TimePicker from "./timePicker"
+import ReserveEmail from "./home/ReserveEmail"
+import Confirmed from "./home/Confirmed"
 
 export interface ModalProps {
   show: boolean
@@ -8,11 +10,23 @@ export interface ModalProps {
 
 export interface ModalState {
   fadeIn: boolean
+  currentComponent: string
 }
 
 class Modal extends React.Component<ModalProps, ModalState> {
   state = {
     fadeIn: false,
+    currentComponent: "",
+  }
+
+  toggleShow = (e: React.SyntheticEvent) => {
+    const { value }: any = e.currentTarget
+    this.setState(
+      {
+        currentComponent: value,
+      },
+      () => console.log(this.state.currentComponent)
+    )
   }
 
   componentDidUpdate(prevProps: ModalProps, prevState: ModalState) {
@@ -31,6 +45,7 @@ class Modal extends React.Component<ModalProps, ModalState> {
   }
 
   render() {
+    const { currentComponent } = this.state
     const { show } = this.props
     return (
       <div
@@ -49,15 +64,23 @@ class Modal extends React.Component<ModalProps, ModalState> {
                 transform: `scale(${this.state.fadeIn ? 1 : 0.3})`,
               }}
             >
-              <h2>Free consultation with Lorem Ipsum</h2>
-              <strong className="modal-desc">
-                At this call, we will spend some time to understand your
-                problems and define if we are a good fit to solve them
-              </strong>
-              <div className="flex-between date-content">
-                {this.props.children}
-                <TimePicker />
-              </div>
+              {currentComponent === "email" ? (
+                <ReserveEmail current={this.toggleShow} />
+              ) : currentComponent === "scheduled" ? (
+                <Confirmed current={this.toggleShow} />
+              ) : (
+                <>
+                  <h2>Free consultation with Lorem Ipsum</h2>
+                  <strong className="modal-desc">
+                    At this call, we will spend some time to understand your
+                    problems and define if we are a good fit to solve them
+                  </strong>
+                  <div className="flex-between date-content">
+                    {this.props.children}
+                    <TimePicker current={this.toggleShow} />
+                  </div>
+                </>
+              )}
             </div>
           </div>
         ) : null}

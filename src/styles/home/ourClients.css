@@ -1,4 +1,4 @@
-.section-info{
+.section-info {
   font-size: 30px;
   margin: 0 auto;
   line-height: 1.2;
@@ -7,7 +7,8 @@
   max-width: 771px;
 }
 
-.clients-main span, .pricing-bottom span {
+.clients-main span,
+.pricing-bottom span {
   margin-top: 40px;
   display: block;
   padding: 0 50px;
@@ -22,11 +23,10 @@
 }
 
 .circles strong {
-        margin-top: 60px;
-        display: block;
-        text-align: center;
-        font-size: 30px;
-
+  margin-top: 60px;
+  display: block;
+  text-align: center;
+  font-size: 30px;
 }
 
 .circles > div {
@@ -59,7 +59,6 @@
   }
 }
 
-
 .clients-main p {
   font-size: 30px;
   text-align: left;
@@ -78,13 +77,12 @@
 }
 
 .workers-img {
- float: right;
+  float: right;
   width: 59%;
-
 }
 
 .disabled {
- pointer-events: none;
+  pointer-events: none;
 }
 
 .slide-section {
@@ -102,7 +100,6 @@
   max-width: 1230px;
 }
 
-
 .slide-section button {
   background: transparent;
   border: none;
@@ -114,15 +111,16 @@
 }
 
 .iphoneImg {
-  background: url("../../images/slideiphone.png") no-repeat center center ;
+  background: url("../../images/slideiphone.png") no-repeat center center;
   background-size: contain;
   position: absolute;
   height: 100%;
   width: 100%;
   top: 0;
   left: 0;
+  opacity: 1;
   z-index: -1;
-  transition: all .2s ease-out
+  transition: all 0.2s ease-out;
 }
 
 .slider-images .gatsby-image-wrapper {
@@ -130,7 +128,7 @@
 }
 
 .slider-images .gatsby-image-wrapper {
-  width: 240px
+  width: 240px;
 }
 
 .prevBtn {
@@ -138,12 +136,89 @@
 }
 .nextBtn {
   margin-left: 25px;
-  transform: rotate(180deg)
+  transform: rotate(180deg);
 }
 
 .iphoneZ {
   z-index: 1 !important;
-  
-  transition: all .2s ease-out;
+  transition: all 0.2s ease-out;
 }
 
+.reserve-right {
+  width: 41%;
+}
+
+.confirmed-main {
+  text-align: center;
+  max-width: 730px;
+  margin: 0 auto;
+}
+
+.confirmed-main h2 {
+  font-size: 26px;
+}
+
+.confirmed-main p {
+  margin-top: 70px;
+}
+
+.confirmed-main h3 {
+  font-size: 16px;
+  margin: 20px 0;
+}
+
+.reserve-mail-main {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1060px;
+  align-items: center;
+}
+
+.reserve-inputs span {
+  margin: 20px 0 10px;
+  display: block;
+  font-size: 16px;
+  color: rgb(0, 0, 0);
+  font-family: "Myriad Pro";
+}
+
+.reserve-inputs input,
+.reserve-inputs textarea {
+  border: 1px solid #cccccc;
+  width: 100%;
+}
+
+.reserve-inputs input {
+  padding: 10px 0px 30px;
+}
+
+.resize-left {
+  width: 39%;
+}
+
+.reserve-inputs textarea {
+  resize: none;
+}
+
+.reserve-mail-main button {
+  margin-top: 15px;
+  background: #0066cb;
+  color: #fff;
+  border: 0;
+  padding: 19px 33px;
+  border-radius: 0;
+  margin-left: 0;
+}
+
+.backBtn {
+  border-radius: 0 !important;
+  padding: 0 !important;
+  background: #fff !important;
+  position: absolute;
+  left: 0;
+}
+
+.backBtn i {
+  color: #0066cb;
+  font-size: 30px;
+}

@@ -1,7 +1,7 @@
 import * as React from "react"
 import { Link } from "gatsby"
 import "../styles/footer.css"
-import GetStarted from "./getStarted";
+import GetStarted from "./getStarted"
 export interface FooterProps {}
 
 const Footer: React.FunctionComponent<FooterProps> = () => {
@@ -25,17 +25,16 @@ const Footer: React.FunctionComponent<FooterProps> = () => {
               <i className="icon-facebook1" />
             </a>
           </ul>
-         <GetStarted/>
+          <GetStarted />
         </div>
         <div className="flex-between footer-bottom">
-            <div>
+          <div>
             <span>2019 XLENT Technologies. All rights reserved.</span>
-            </div>
-         <div>
-         <span>Tel: (650) 337-7781 </span>
-          <span className="footer-email"> Email: info@xlent.tech</span>
-         </div>
-         
+          </div>
+          <div>
+            <span>Tel: (650) 337-7781 </span>
+            <span className="footer-email"> Email: info@xlent.tech</span>
+          </div>
         </div>
       </div>
     </footer>

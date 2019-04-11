@@ -1,6 +1,5 @@
 import * as React from "react"
 import Img from "../image"
-import { Spring } from "react-spring/renderprops"
 import "../../styles/home/ourClients.css"
 import "react-circular-progressbar/dist/styles.css"
 import Circles from "./progressCircle"
@@ -21,20 +20,23 @@ class Clients extends React.Component<ClientsProps, ClientsState> {
           industry.
         </h3>
         <span>
-          {" "}
           Lorem Ipsum is simply dummy text of the printing and typesetting
           industry. Lorem Ipsum is simply dummy text of the printing and
-          typesetting industry.  Lorem Ipsum is simply dummy text of the printing and typesetting
-          industry.
+          typesetting industry. Lorem Ipsum is simply dummy text of the printing
+          and typesetting industry.
         </span>
         <Circles />
         <div className="workers-main">
-          <p> Lorem Ipsum is simply dummy text of the printing and typesetting
-          industry. Lorem Ipsum is simply dummy text of the printing and
-          typesetting industry.  Lorem Ipsum is simply dummy text of the printing and typesetting
-          industry.</p>
+          <p>
+            {" "}
+            Lorem Ipsum is simply dummy text of the printing and typesetting
+            industry. Lorem Ipsum is simply dummy text of the printing and
+            typesetting industry. Lorem Ipsum is simply dummy text of the
+            printing and typesetting industry.
+          </p>
           <div className="workers-img">
-            <Img image="workers"/></div>
+            <Img image="workers" />
+          </div>
         </div>
       </section>
     )

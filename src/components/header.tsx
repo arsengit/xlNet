@@ -1,8 +1,8 @@
 import * as React from "react"
 import { Link } from "gatsby"
 import "../styles/header.css"
-import Modal from "./Modal";
-import DataPicker from "./dataPicker";
+import Modal from "./Modal"
+import DataPicker from "./dataPicker"
 const logo = require("../images/home/logo.png")
 
 export interface HeaderProps {}
@@ -25,14 +25,14 @@ class Header extends React.Component<HeaderProps, HeaderState> {
 
   closeModal = (e: React.SyntheticEvent) => {
     this.setState({
-      show: !this.state.show
+      show: !this.state.show,
     })
   }
 
   toggleShow = (e: React.SyntheticEvent) => {
     e.preventDefault()
     this.setState({
-      show: !this.state.show
+      show: !this.state.show,
     })
   }
 
@@ -81,12 +81,12 @@ class Header extends React.Component<HeaderProps, HeaderState> {
     addEventListener("scroll", this.handleScroll)
   }
 
-  componentWillMount() {
+  componentWillUnmount() {
     removeEventListener("scroll", this.handleScroll)
   }
 
   render() {
-    const {show} = this.state
+    const { show } = this.state
     return (
       <div className="header-main ">
         <div
@@ -118,12 +118,10 @@ class Header extends React.Component<HeaderProps, HeaderState> {
             <button onClick={this.toggleShow}>Pick a Time</button>
           </ul>
         </header>
-      
-        <Modal onClose ={this.closeModal} show={show}>
-          {show ? <DataPicker show={show}/>: null}
+
+        <Modal onClose={this.closeModal} show={show}>
+          {show ? <DataPicker show={show} /> : null}
         </Modal>
-      
-       
       </div>
     )
   }

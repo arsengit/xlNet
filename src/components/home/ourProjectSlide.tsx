@@ -1,6 +1,5 @@
 import * as React from "react"
 import Img from "../image"
-import { Spring } from "react-spring/renderprops"
 
 const arrow = require("../../images/home/arrow.png")
 
@@ -32,7 +31,7 @@ class Slider extends React.Component<SliderProps, SliderState> {
     requestAnimationFrame(() => {(slider as HTMLDivElement).style.transition = "transform 0.3s ease-out";
     (slider as HTMLDivElement).style.transform = `translateX(${(slider as HTMLDivElement)
         .offsetWidth / this.state.images.length}px)`;
-        (document.getElementsByClassName("gatsby-image-wrapper")[4] as HTMLDivElement).style.opacity = "1"
+        (document.getElementsByClassName("gatsby-image-wrapper")[3] as HTMLDivElement).style.opacity = "0"
     })
     setTimeout(() => {
       ;(slider as HTMLDivElement).style.transition = "none"
@@ -65,7 +64,7 @@ class Slider extends React.Component<SliderProps, SliderState> {
                            
               ((slider as HTMLDivElement)
                 .firstChild as HTMLDivElement).style.opacity = "1";
-            }, 200)
+            }, 100)
           })
         }
       )
@@ -80,7 +79,7 @@ class Slider extends React.Component<SliderProps, SliderState> {
   })
     requestAnimationFrame(() => {
       (slider as HTMLDivElement).style.transition = "transform 0.3s ease-out";
-      (document.getElementsByClassName("gatsby-image-wrapper")[4] as HTMLDivElement).style.opacity = "1";
+      (document.getElementsByClassName("gatsby-image-wrapper")[5] as HTMLDivElement).style.opacity = "0";
       (slider as HTMLDivElement).style.transform = `translateX(${-(slider as HTMLDivElement)
         .offsetWidth / this.state.images.length}px)`;
     })
@@ -108,7 +107,7 @@ class Slider extends React.Component<SliderProps, SliderState> {
                 "translateX(0px)"
               ;((slider as HTMLDivElement)
                 .lastChild as HTMLDivElement).style.opacity = "1"
-            }, 200)
+            }, 100)
           })
         }
       )

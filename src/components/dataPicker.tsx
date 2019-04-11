@@ -23,11 +23,10 @@ class DataPicker extends React.Component<DataPickerProps, DataPickerState> {
           date={this.state.date} // momentPropTypes.momentObj or null
           onDateChange={date => this.setState({ date })} // PropTypes.func.isRequired
           focused={true} // PropTypes.bool
-          onFocusChange={({ focused }) => this.setState({  })} // PropTypes.func.isRequired
+          onFocusChange={({ focused }) => this.setState({})} // PropTypes.func.isRequired
           id="pick_time" // PropTypes.string.isRequired,
           numberOfMonths={1}
           daySize={35}
-          
           keepOpenOnDateSelect={true}
           calendarInfoPosition="after"
           hideKeyboardShortcutsPanel
