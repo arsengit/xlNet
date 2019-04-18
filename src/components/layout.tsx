@@ -24,6 +24,6 @@ const Layout: React.FunctionComponent = ({ children }) => (
       </>
     )}
   />
-)
+);
 
 export default Layout

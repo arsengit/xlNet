@@ -167,6 +167,16 @@
   margin: 20px 0;
 }
 
+.reserve-left span {
+  display: block;
+}
+
+.reserve-right strong {
+  text-align: left;
+  font-family: "OpenSans SemiBold";
+  padding-bottom: 10px;
+}
+
 .reserve-mail-main {
   display: flex;
   justify-content: space-between;
@@ -192,9 +202,19 @@
   padding: 10px 0px 30px;
 }
 
-.resize-left {
+.reserve-left {
   width: 39%;
 }
+
+.time-span {
+    font-size: 16px;
+    color: rgb(0, 102, 203);
+    line-height: 2.25;
+   
+  
+}
+
+
 
 .reserve-inputs textarea {
   resize: none;

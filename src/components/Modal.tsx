@@ -21,12 +21,9 @@ class Modal extends React.Component<ModalProps, ModalState> {
 
   toggleShow = (e: React.SyntheticEvent) => {
     const { value }: any = e.currentTarget
-    this.setState(
-      {
-        currentComponent: value,
-      },
-      () => console.log(this.state.currentComponent)
-    )
+    this.setState({
+      currentComponent: value,
+    })
   }
 
   componentDidUpdate(prevProps: ModalProps, prevState: ModalState) {
@@ -49,7 +46,7 @@ class Modal extends React.Component<ModalProps, ModalState> {
     const { show } = this.props
     return (
       <div
-        onClick={this.onClose}
+       
         style={{
           opacity: this.state.fadeIn ? 1 : 0,
           transition: "opacity 0.2s ease-out",
@@ -64,6 +61,7 @@ class Modal extends React.Component<ModalProps, ModalState> {
                 transform: `scale(${this.state.fadeIn ? 1 : 0.3})`,
               }}
             >
+            <span onClick={this.onClose} className="closeBtn"><i className="icon-close"></i></span>
               {currentComponent === "email" ? (
                 <ReserveEmail current={this.toggleShow} />
               ) : currentComponent === "scheduled" ? (

@@ -161,6 +161,15 @@ header > ul a:hover {
   left: calc(50% - 585px);
 }
 
+.closeBtn{
+  cursor: pointer;
+  position: absolute;
+  right: 0;
+  top: -50px;
+  color: #fff;
+  font-size: 20px;
+}
+
 .backdrop {
   position: absolute;
   width: 100%;

@@ -3,9 +3,10 @@ import { Link } from "gatsby"
 import "../styles/header.css"
 import Modal from "./Modal"
 import DataPicker from "./dataPicker"
-const logo = require("../images/home/logo.png")
+const logo = require("../images/home/logo.png");
 
-export interface HeaderProps {}
+export interface HeaderProps {
+}
 
 export interface HeaderState {
   background: boolean
@@ -30,7 +31,7 @@ class Header extends React.Component<HeaderProps, HeaderState> {
   }
 
   toggleShow = (e: React.SyntheticEvent) => {
-    e.preventDefault()
+    e.preventDefault();
     this.setState({
       show: !this.state.show,
     })
@@ -54,7 +55,7 @@ class Header extends React.Component<HeaderProps, HeaderState> {
   }
 
   changeActive = () => {
-    const location = window.location.pathname
+    const location = window.location.pathname;
     if (location == "/" && this.state.height === true) {
       this.setState({
         background: true,

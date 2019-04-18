@@ -50,16 +50,11 @@ class ReserveEmail extends React.Component<
           <i className="icon-left-arrow" />
         </button>
         <div className="reserve-mail-main">
-          <div className="resize-left">
-            <span>
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industryLorem Ipsum is simply dummy text of the printing and
-              typesetting industryLorem Ipsum is simply dummy text of the
-              printing and typesetting industryLorem Ipsum is simply dummy text
-              of the printing and typesetting industryLorem Ipsum is simply
-              dummy text of the printing and typesetting industryLorem Ipsum is
-              simply dummy text of the printing and typesetting industry
+          <div className="reserve-left">
+            <span className="time-span">
+             Picked Time
             </span>
+            <span></span>
             <span>
               Lorem Ipsum is simply dummy text of the printing and typesetting
               industryLorem Ipsum is simply dummy text of the printing and
@@ -71,6 +66,7 @@ class ReserveEmail extends React.Component<
             </span>
           </div>
           <div className="reserve-right">
+          <strong>Enter Details</strong>
             {inputs.map((item, index) => (
               <div className="reserve-inputs" key={index}>
                 <span>{item.span}</span>
