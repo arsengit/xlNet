@@ -74,11 +74,11 @@ class TimePicker extends React.Component<TimePickerProps, TimePickerState> {
   }
 
   activeInput = (e: React.SyntheticEvent) => {
-    e.preventDefault()
+    e.preventDefault();
     const { id }: any = e.target
     this.setState({
       active: id,
-    })
+    });
   }
   render() {
     const { active } = this.state

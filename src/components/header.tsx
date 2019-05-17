@@ -2,51 +2,62 @@ import * as React from "react"
 import { Link } from "gatsby"
 import "../styles/header.css"
 import Modal from "./Modal"
-import DataPicker from "./dataPicker"
+import DataPicker from "./dataPicker";
+import { Animated } from "./animated"
 const logo = require("../images/home/logo.png");
 
-export interface HeaderProps {
+export interface HeaderProps
+{
 }
 
-export interface HeaderState {
+export interface HeaderState
+{
   background: boolean
   height: boolean
   show: boolean
+  hamburger: boolean
 }
 
 class Header extends React.Component<HeaderProps, HeaderState> {
-  constructor(props: HeaderProps) {
+  constructor(props: HeaderProps)
+  {
     super(props)
     this.state = {
       background: true,
       height: false,
       show: false,
+      hamburger: false,
     }
   }
 
-  closeModal = (e: React.SyntheticEvent) => {
+  closeModal = () =>
+  {
     this.setState({
       show: !this.state.show,
     })
   }
 
-  toggleShow = (e: React.SyntheticEvent) => {
+  toggleShow = (e: React.SyntheticEvent) =>
+  {
     e.preventDefault();
     this.setState({
       show: !this.state.show,
     })
   }
 
-  handleScroll = () => {
+  handleScroll = () =>
+  {
     const docHeight = document.body.scrollHeight
     const scrollHeight = window.scrollY
     const diff = document.body.scrollHeight - window.innerHeight
     const main = diff + scrollHeight
-    if (main + 150 >= docHeight) {
+    if (main + 150 >= docHeight)
+    {
       this.setState({
         height: true,
       })
-    } else {
+    } else
+    {
       this.setState({
         height: false,
       })
@@ -54,39 +65,60 @@ class Header extends React.Component<HeaderProps, HeaderState> {
     this.changeActive()
   }
 
-  changeActive = () => {
+  onResize = () =>
+  {
+    const small = window.innerWidth <= 800
+    {
+      this.setState(state =>
+        state.hamburger === small ? null :
+          {
+            hamburger: small,
+          }, () => console.log(this.state.hamburger))
+    }
+  }
+
+  changeActive = () =>
+  {
     const location = window.location.pathname;
-    if (location == "/" && this.state.height === true) {
+    if (location == "/" && this.state.height === true)
+    {
       this.setState({
         background: true,
       })
-    } else if (location == "/" && this.state.height === false) {
+    } else if (location == "/" && this.state.height === false)
+    {
       this.setState({
         background: false,
       })
     }
   }
 
-  componentDidMount() {
+  componentDidMount()
+  {
     const location = window.location.pathname
-    if (location == "/") {
+    if (location == "/")
+    {
       this.setState({
         background: !this.state.background,
       })
     }
-    if (location == "/" && this.state.height === true) {
+    if (location == "/" && this.state.height === true)
+    {
       this.setState({
         background: true,
       })
     }
-    addEventListener("scroll", this.handleScroll)
+    addEventListener("scroll", this.handleScroll);
+    addEventListener("resize", this.onResize)
   }
 
-  componentWillUnmount() {
+  componentWillUnmount()
+  {
     removeEventListener("scroll", this.handleScroll)
   }
 
-  render() {
+  render()
+  {
     const { show } = this.state
     return (
       <div className="header-main ">
@@ -102,22 +134,31 @@ class Header extends React.Component<HeaderProps, HeaderState> {
           <Link to="/">
             <img src={logo} alt="logo" />
           </Link>
+          <Animated from={{ opacity: 1 }}
+            to={{ opacity: 0 }}
+            inverse={this.state.hamburger}
+          >
+            {
+              style => (
+                <ul style={style}>
+                  <Link activeClassName="head-active" to="/">
+                    Development
+              </Link>
+                  <Link activeClassName="head-active" to="/pricing">
+                    Pricing
+              </Link>
+                  <Link activeClassName="head-active" to="/career">
+                    Career
+              </Link>
+                  <Link activeClassName="head-active" to="/contact">
+                    Contact
+              </Link>
+                  <button onClick={this.toggleShow}>Pick a Time</button>
+                </ul>
+              )
+            }
+          </Animated>
 
-          <ul>
-            <Link activeClassName="head-active" to="/">
-              Development
-            </Link>
-            <Link activeClassName="head-active" to="/pricing">
-              Pricing
-            </Link>
-            <Link activeClassName="head-active" to="/career">
-              Career
-            </Link>
-            <Link activeClassName="head-active" to="/contact">
-              Contact
-            </Link>
-            <button onClick={this.toggleShow}>Pick a Time</button>
-          </ul>
         </header>
 
         <Modal onClose={this.closeModal} show={show}>
