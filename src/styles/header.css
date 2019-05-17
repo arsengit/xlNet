@@ -41,6 +41,29 @@ header > ul a:hover {
   opacity: 0;
 }
 
+header {
+  position: relative;
+}
+
+header ul.hamburger {
+  right: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+}
+
+header ul.hamburger a {
+  text-align: center;
+  padding-left: 0;
+  line-height: unset;
+}
+
+header ul.hamburger button {
+  margin: 0
+}
+
+
 .header-content-container {
   background: url("../images/home_bg.png") center top no-repeat;
   height: 100vh;
@@ -161,7 +184,7 @@ header > ul a:hover {
   left: calc(50% - 585px);
 }
 
-.closeBtn{
+.closeBtn {
   cursor: pointer;
   position: absolute;
   right: 0;

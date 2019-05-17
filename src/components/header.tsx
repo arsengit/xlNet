@@ -2,16 +2,14 @@ import * as React from "react"
 import { Link } from "gatsby"
 import "../styles/header.css"
 import Modal from "./Modal"
-import DataPicker from "./dataPicker";
+import DataPicker from "./dataPicker"
 import { Animated } from "./animated"
-const logo = require("../images/home/logo.png");
+const logo = require("../images/home/logo.png")
 
-export interface HeaderProps
-{
-}
+export interface HeaderProps {}
 
-export interface HeaderState
-{
+export interface HeaderState {
+  toggleMenu: boolean
   background: boolean
   height: boolean
   show: boolean
@@ -19,10 +17,10 @@ export interface HeaderState
 }
 
 class Header extends React.Component<HeaderProps, HeaderState> {
-  constructor(props: HeaderProps)
-  {
+  constructor(props: HeaderProps) {
     super(props)
     this.state = {
+      toggleMenu: false,
       background: true,
       height: false,
       show: false,
@@ -30,34 +28,29 @@ class Header extends React.Component<HeaderProps, HeaderState> {
     }
   }
 
-  closeModal = () =>
-  {
+  closeModal = () => {
     this.setState({
       show: !this.state.show,
     })
   }
 
-  toggleShow = (e: React.SyntheticEvent) =>
-  {
-    e.preventDefault();
+  toggleShow = (e: React.SyntheticEvent) => {
+    e.preventDefault()
     this.setState({
       show: !this.state.show,
     })
   }
 
-  handleScroll = () =>
-  {
+  handleScroll = () => {
     const docHeight = document.body.scrollHeight
     const scrollHeight = window.scrollY
     const diff = document.body.scrollHeight - window.innerHeight
     const main = diff + scrollHeight
-    if (main + 150 >= docHeight)
-    {
+    if (main + 150 >= docHeight) {
       this.setState({
         height: true,
       })
-    } else
-    {
+    } else {
       this.setState({
         height: false,
       })
@@ -65,61 +58,68 @@ class Header extends React.Component<HeaderProps, HeaderState> {
     this.changeActive()
   }
 
-  onResize = () =>
-  {
+  onResize = () => {
     const small = window.innerWidth <= 800
     {
-      this.setState(state =>
-        state.hamburger === small ? null :
-          {
-            hamburger: small,
-          }, () => console.log(this.state.hamburger))
+      this.setState(
+        state =>
+          state.hamburger === small
+            ? null
+            : {
+                hamburger: small,
+              },
+        () => console.log(this.state.hamburger)
+      )
     }
   }
 
-  changeActive = () =>
-  {
-    const location = window.location.pathname;
-    if (location == "/" && this.state.height === true)
-    {
+  menuToggle = () => {
+    this.setState({
+      toggleMenu: true,
+    })
+  }
+
+  changeActive = () => {
+    const location = window.location.pathname
+    if (location == "/" && this.state.height === true) {
       this.setState({
         background: true,
       })
-    } else if (location == "/" && this.state.height === false)
-    {
+    } else if (location == "/" && this.state.height === false) {
       this.setState({
         background: false,
       })
     }
   }
 
-  componentDidMount()
-  {
+  componentDidMount() {
     const location = window.location.pathname
-    if (location == "/")
-    {
+    if (location == "/") {
       this.setState({
         background: !this.state.background,
       })
     }
-    if (location == "/" && this.state.height === true)
-    {
+    if (location == "/" && this.state.height === true) {
       this.setState({
         background: true,
       })
     }
-    addEventListener("scroll", this.handleScroll);
+    if (window.innerWidth <= 800) {
+      this.setState({
+        hamburger: true,
+      })
+    }
+    addEventListener("scroll", this.handleScroll)
     addEventListener("resize", this.onResize)
   }
 
-  componentWillUnmount()
-  {
+  componentWillUnmount() {
     removeEventListener("scroll", this.handleScroll)
+    removeEventListener("resize", this.onResize)
   }
 
-  render()
-  {
-    const { show } = this.state
+  render() {
+    const { show, hamburger, toggleMenu } = this.state
     return (
       <div className="header-main ">
         <div
@@ -134,31 +134,40 @@ class Header extends React.Component<HeaderProps, HeaderState> {
           <Link to="/">
             <img src={logo} alt="logo" />
           </Link>
-          <Animated from={{ opacity: 1 }}
-            to={{ opacity: 0 }}
+          {hamburger && <button onClick={this.menuToggle}>Open Nav bar</button>}
+          <Animated
+            from={
+              this.state.toggleMenu
+                ? { opacity: 0, transform: "translateY(-10%)" }
+                : { opacity: 0 }
+            }
+            to={
+              this.state.toggleMenu
+                ? { opacity: 1, transform: "translateY(100%)" }
+                : { opacity: 1 }
+            }
             inverse={this.state.hamburger}
           >
-            {
-              style => (
-                <ul style={style}>
+            {style =>
+              toggleMenu ? (
+                <ul style={style} className={hamburger ? "hamburger" : ""}>
                   <Link activeClassName="head-active" to="/">
                     Development
-              </Link>
+                  </Link>
                   <Link activeClassName="head-active" to="/pricing">
                     Pricing
-              </Link>
+                  </Link>
                   <Link activeClassName="head-active" to="/career">
                     Career
-              </Link>
+                  </Link>
                   <Link activeClassName="head-active" to="/contact">
                     Contact
-              </Link>
+                  </Link>
                   <button onClick={this.toggleShow}>Pick a Time</button>
                 </ul>
-              )
+              ) : null
             }
           </Animated>
-
         </header>
 
         <Modal onClose={this.closeModal} show={show}>
