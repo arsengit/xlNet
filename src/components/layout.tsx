@@ -5,6 +5,7 @@ import "../styles/style.css"
 import Header from "./header"
 import Footer from "./Footer"
 
+
 const Layout: React.FunctionComponent = ({ children }) => (
   <StaticQuery
     query={graphql`

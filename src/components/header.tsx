@@ -69,7 +69,7 @@ class Header extends React.Component<HeaderProps, HeaderState> {
 
   onResize = () =>
   {
-    const small = window.innerWidth <= 800;
+    const small = window.innerWidth <= 900;
     {
       this.setState(
         state =>
@@ -137,8 +137,8 @@ class Header extends React.Component<HeaderProps, HeaderState> {
   componentDidMount()
   {
     this.setState({
-      showNav: window.innerWidth > 800,
-      hamburger: window.innerWidth <= 800,
+      showNav: window.innerWidth > 900,
+      hamburger: window.innerWidth <= 900,
     });
     const location = window.location.pathname
     if (location == "/")

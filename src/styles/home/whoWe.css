@@ -9,7 +9,8 @@ section h2 {
 }
 
 .whoWe-content .light {
-  width: 65%;
+  min-width: 154px;
+  max-width: 155px;
 }
 
 .whoWe-text {

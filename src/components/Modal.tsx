@@ -17,14 +17,14 @@ class Modal extends React.Component<ModalProps, ModalState> {
   state = {
     fadeIn: false,
     currentComponent: "",
-  }
+  };
 
   toggleShow = (e: React.SyntheticEvent) => {
-    const { value }: any = e.currentTarget
+    const { value }: any = e.currentTarget;
     this.setState({
       currentComponent: value,
     })
-  }
+  };
 
   componentDidUpdate(prevProps: ModalProps, prevState: ModalState) {
     if (prevProps.show === false && this.props.show === true) {
@@ -36,14 +36,14 @@ class Modal extends React.Component<ModalProps, ModalState> {
   }
 
   onClose = () => {
-    this.setState({ fadeIn: false }, () => setTimeout(this.props.onClose, 300))
+    this.setState({ fadeIn: false }, () => setTimeout(this.props.onClose, 300));
     document.body.style.overflowY = "auto"
     ;(document.querySelector("main") as HTMLElement).style.filter = "unset"
-  }
+  };
 
   render() {
-    const { currentComponent } = this.state
-    const { show } = this.props
+    const { currentComponent } = this.state;
+    const { show } = this.props;
     return (
       <div
        
