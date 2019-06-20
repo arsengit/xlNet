@@ -7,6 +7,10 @@
   max-width: 771px;
 }
 
+.pulse {
+  margin: 0 10px
+}
+
 .clients-main span,
 .pricing-bottom span {
   margin-top: 40px;
@@ -20,6 +24,7 @@
   margin-top: 90px;
   display: flex;
   justify-content: space-around;
+  flex-wrap: wrap;
 }
 
 .circles strong {
@@ -90,7 +95,7 @@
   align-items: center;
   justify-content: center;
   position: relative;
-  padding: 55px 20px;
+  padding: 3% 20px;
 }
 
 .slider-main {

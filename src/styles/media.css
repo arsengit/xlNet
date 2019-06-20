@@ -1,15 +1,120 @@
+@media screen and (max-width: 1120px){
+  .workers-img {
+    float: none;
+    width: 100%;
+    max-width: 720px;
+    margin: 20px auto 0;
+  }
+
+  .workers-main p {
+    position: relative;
+  }
+}
+
 @media screen and (max-width: 930px) {
-  .whoWe-content {
+  .whoWe-content, .pricing-bottom, .process-item {
     flex-direction: column;
     align-items: center;
   }
   .whoWe-text {
-    margin-left: unset;
+    margin: 20px auto 0;
   }
+  .process-item .process-text {
+    width: 100% !important;
+}
+
+.process-img {
+  width: 30% !important;
+}
+  .process-item2, .process-item4 {
+    flex-direction: column-reverse;
+  }
+  
+  .process-items .container {
+    padding-top: 30% !important;
+    padding-bottom: 30% !important;
+  }
+
+  .process-item {
+    justify-content: center;
+  }
+
+  .slide-section {
+    padding: 7% 20px;
+  }
+
+  .slider-images {
+    height: 414px;
+    display: block;
+  }
+
+  .slider-main {
+    max-width: 230px;
+  }
+
+  .slider-images .gatsby-image-wrapper {
+    margin: 0;
+}
+
   .whoWe-text a {
     margin: 10px auto;
     display: block;
     text-align: center;
     max-width: 100px;
+  }
+
+  .pricing-text button {
+    margin: 0 auto;
+    display: block;
+  }
+}
+
+
+@media screen and (max-width: 700px) {
+  .header-content h1 {
+    font-size: 60px;
+  }
+
+  .pricing-items {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+
+  .pricing-items .pricing-img {
+    width: 65%;
+  }
+  .process-img {
+    width: 35% !important;
+  }
+
+  .get-form .flex-between, .get-content {
+    flex-direction: column;
+  }
+  .get-form .flex-between input,.get-form, .get-in-contact {
+    width: 100%;
+  }
+
+  .slider-main {
+    max-width: 230px;
+  }
+
+  .slide-section {
+    padding: 10% 20px;
+  }
+
+  .process-items .container {
+    padding-top: 45% !important
+  }
+}
+
+@media screen and (max-width: 620px) {
+  
+  .clients-main span {
+    text-align: center;
+  }
+ .card-main {
+    justify-content: center;
   }
 }

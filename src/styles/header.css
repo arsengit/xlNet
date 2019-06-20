@@ -63,6 +63,7 @@ header ul.hamburger a {
 
 .navWithout {
   transform: translateY(0%) !important;
+  transition: all 0s !important;
 }
 
 header ul.hamburger button {
@@ -93,8 +94,8 @@ header ul.hamburger button {
 .header-content h1 {
   margin-top: 130px;
   letter-spacing: 2px;
-  max-width: 590px;
-  font-size: 4vw;
+  max-width: 610px;
+  font-size: 80px;
 }
 
 .header-content p {

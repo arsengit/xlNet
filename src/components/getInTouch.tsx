@@ -83,6 +83,7 @@ class Contact extends React.Component<ContactProps, ContactState> {
               </form>
             </div>
             <div className="get-in-contact">
+              <div className="get-in">
               <h4>Contact</h4>
               <span>Phone number</span>
               <strong>+(916)111 1111</strong>
@@ -95,6 +96,7 @@ class Contact extends React.Component<ContactProps, ContactState> {
                 text ever since the 1500s, when an unknown printer took a galley
                 of type and scrambled it to make a type specimen book. It has{" "}
               </strong>
+              </div>
             </div>
           </div>
         </div>

@@ -16,6 +16,7 @@ export interface HeaderState
   showModal: boolean
   hamburger: boolean
   inverseAnimation: any
+  opened: boolean
 }
 
 class Header extends React.Component<HeaderProps, HeaderState> {
@@ -29,6 +30,7 @@ class Header extends React.Component<HeaderProps, HeaderState> {
       height: false,
       showModal: false,
       hamburger: false,
+      opened: false
     }
   }
   private _timeOutId: number | any
@@ -69,10 +71,10 @@ class Header extends React.Component<HeaderProps, HeaderState> {
   render()
   {
     console.log(this.state.showNav)
-    const { showModal, hamburger, showNav, background, inverseAnimation } = this.state
+    const { showModal, hamburger, showNav, background, inverseAnimation, opened } = this.state
     return (
       <div className="header-main ">
-        <div className={background ? "header-main-bg" : "header-main-bg head-opacity"
+        <div style={opened ? { boxShadow: "unset" } : {}} className={background ? "header-main-bg" : "header-main-bg head-opacity"
         }
         />
 
@@ -80,7 +82,7 @@ class Header extends React.Component<HeaderProps, HeaderState> {
           <Link to="/">
             <img src={logo} alt="logo" />
           </Link>
-          {hamburger && <button onClick={this.menuToggle}>Open</button>}
+          {hamburger && <button onClick={this.menuToggle}><i className={this.state.opened ? "icon-close" : "icon-menu"}></i></button>}
 
           {
             showNav &&
@@ -169,6 +171,7 @@ class Header extends React.Component<HeaderProps, HeaderState> {
 
   menuToggle = () =>
   {
+    this.toggleButton();
     if (this.state.showNav)
     {
       this.setState({
@@ -200,6 +203,13 @@ class Header extends React.Component<HeaderProps, HeaderState> {
       );
     }
 
+  }
+
+  toggleButton = () =>
+  {
+    this.setState({
+      opened: !this.state.opened
+    })
   }
 
   changeActive = () =>

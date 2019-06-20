@@ -3,9 +3,8 @@ import { Link } from "gatsby"
 import "../styles/footer.css"
 import GetStarted from "./getStarted"
 
-export interface FooterProps {}
-
-const Footer: React.FunctionComponent<FooterProps> = () => {
+function Footer()
+{
   return (
     <footer>
       <div className="container">

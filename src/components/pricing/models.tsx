@@ -1,17 +1,17 @@
 import * as React from "react"
-import "../../styles/pricing/pricing.css"
 import Img from "../image"
 import GetStarted from "../getStarted";
-export interface PricingModelsProps {}
+export interface PricingModelsProps { }
 
-export interface PricingModelsState {}
+export interface PricingModelsState { }
 
 class PricingModels extends React.Component<
   PricingModelsProps,
   PricingModelsState
-> {
+  > {
   state = {}
-  render() {
+  render()
+  {
     return (
       <section className="pricing-main container">
         <h2>Pricing Models</h2>
@@ -43,7 +43,7 @@ class PricingModels extends React.Component<
               industry. Lorem Ipsum is simply dummy text of the printing and
               typesetting industry.
             </span>
-           <GetStarted/>
+            <GetStarted />
           </div>
         </div>
       </section>

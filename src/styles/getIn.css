@@ -19,6 +19,9 @@
   padding: 45px;
 }
 
+.get-in {
+  padding: 40px;
+}
 .get-form input {
   border: transparent;
   width: 45%;
@@ -72,9 +75,6 @@ button {
   font-family: "OpenSans Regular";
 }
 
-.get-in-contact {
-  padding: 40px;
-}
 
 .get-in-contact h4 {
   color: #fff;
