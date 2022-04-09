@@ -18,7 +18,7 @@
     "gatsby-plugin-typescript": "2.1.5",
     "gatsby-source-filesystem": "2.1.18",
     "gatsby-transformer-sharp": "2.2.12",
-    "moment": "^2.24.0",
+    "moment": "^2.29.2",
     "prop-types": "^15.7.2",
     "react": "^16.8.4",
     "react-circular-progressbar": "^1.0.0",
